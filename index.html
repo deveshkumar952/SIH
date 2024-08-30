@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Function Web Interface</title>
+    <script>
+        async function sendData() {
+            const input = document.getElementById('input').value;
+            const response = await fetch('/process', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ input: input }),
+            });
+            const result = await response.json();
+            document.getElementById('result').innerText = result.result;
+        }
+    </script>
+</head>
+<body>
+    <h1>Python Function Web Interface</h1>
+    <input type="text" id="input" placeholder="Enter some data">
+    <button onclick="sendData()">Send</button>
+    <p id="result"></p>
+</body>
+</html>
