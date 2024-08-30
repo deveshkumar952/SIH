@@ -1,0 +1,26 @@
+Name - Devesh Kumar 
+X 
+2023490832 
+Assignment-01 
+Q1. list the elements of each of the following sets 
+(i) A ={x EN/3<3<g) 
+A = {4, 5, 6,7,8 } 
+(ii) B= {xEN/ x is even, Uc 115 
+B= {2, 4, 6,8,10} 
+(1) C= {MEN/4th =3} 
+x =- 1 
+C= { 1} empty set 
+Q2. let A = {2, 3, 9,5] 
+(i) Show that A is nota subset of B = {n FN/ nes even) 
+we need to find an element in A that is not inB 
+In Set A. 235 € A 
+but, {3} &B 
+--. 
+A is not a subset of B 
+(ii) show that A is proper subject of C={1, 2,3, 8,9). 
+we need to show that A is a subset of c but A is not equal to c 
+Since allelements of A are also present inc 
+{ 2 , 3, 4, 5 ] E C 
+but also c has additional element 
+21,6,7,98] E A 
+A is proper set of C 
