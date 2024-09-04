@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Extraction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style-0d4ea682.css') }}">
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <div class="selected-images-card">
+                <h2>Your Extracted Text:</h2>
+                <pre>{{ text }}</pre>
+                <a href="{{ url_for('home') }}" class="reset pointer">Start Again</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

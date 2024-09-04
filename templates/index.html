@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/x-icon" href="icon.ico">
+    <title>Image to Text Converter - Extract Text From Picture Online</title>
+    <meta name="description" content="Extract text from image with our Picture to text converter for free. It uses advanced online OCR technology to convert image to text with high accuracy.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
+    <meta property="og:image" content="images/picture-to-text.jpeg">
+    <link rel="stylesheet" href="../static/css/style-0d4ea682.css">
+</head>
+<body>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    <header>
+        <nav>
+            <a href="icon.ico" class="logo-div">
+                <img src="icon.ico" height="100%" width="100%" class="logo" alt="Picture to Text">
+                Picture to Text
+            </a>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">☰</label>
+            <ul class="menu">
+                <li><a href="#">Image To Text</a></li>
+                <li><a href="#">JPG To Word</a></li>
+                <li><a href="#">Image to PDF</a></li>
+                <li><a href="#">PDF to Text</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="section hero">
+        <div class="container">
+            <div class="text-center px-2rem">
+                <h1 class="text-center">Picture to Text Converter</h1>
+                <p>Use our image to text converter to extract editable text from images, screenshots or notes smartly. Upload, Convert, and Copy.</p>
+            </div>
+            <div style="max-width: 100%;min-height:90px; text-align:center">
+                <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4005926424186955" data-ad-slot="4483283567"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container outer-tool-card">
+            <!-- Wrap the upload section inside a form -->
+            <form action="{{ url_for('upload_image') }}" method="POST" enctype="multipart/form-data">
+                <div class="inner-tool-card drag-here">
+                    <div class="text-center before-input d-flex">
+                        <label for="file" class="pointer">
+                            <img src="images/tool-img.svg" alt="tool" width="90" height="85">
+                        </label>
+                        <p class="drag-text">Drag, Upload or Paste images</p>
+                        <label class="browse-label" for="file">Browse</label>
+                        <small>Files supported: JPG | PNG | JPEG | GIF | JFIF</small>
+                    </div>
+                </div>
+                <!-- File input should be visible or accessible via the label -->
+                <input type="file" id="file" name="file" multiple accept="image/*" style="display:none;">
+                <!-- Convert button -->
+                <button type="submit" class="convert-btn pointer">Convert</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="display-section" class="pt-0" style="display:none">
+        <div class="container">
+            <div class="selected-images-card">
+                <div class="upload-image-stats">
+                    <div>
+                        <strong>Uploaded Files <span class="upload-count">0</span></strong>
+                    </div>
+                    <div class="remove-all js-remove-all pointer">
+                        <img src="images/trash.svg" alt="trash">
+                        <span>Remove All</span>
+                    </div>
+                </div>
+                <div class="uploaded-images"></div>
+                <div class="convert-btn-row">
+                    <div id="cloudflare_container" class="cloudflare_container"></div>
+                    <button class="convert-btn js__convert_btn pointer">
+                        <span>Convert</span>
+                        <img src="images/arrow-right.svg" alt="arrow" width="20">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="result-section" class="pt-0 result-section" style="display: none;">
+        <div class="container">
+            <div class="selected-images-card">
+                <div class="upload-image-stats">
+                    <div><strong>Your files are converted</strong></div>
+                    <div class="after-result-actions">
+                        <div class="reset js-reset pointer">
+                            <img src="images/reset.svg" alt="reset">
+                            <span>Start Again</span>
+                        </div>
+                        <div class="download js-download pointer">
+                            <img src="images/download.svg" alt="download">
+                            <span>Download All</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="converted-images">
+                    <div class="converted-images__box"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

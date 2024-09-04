@@ -17,7 +17,7 @@ ENDPOINT = "https://computervisionmodel1.cognitiveservices.azure.com/"
 computervision_client = ComputerVisionClient(ENDPOINT, CognitiveServicesCredentials(API_KEY))
 
 print("===== START - Read File - remote =====")
-local_image  = './images/img1.jpg'
+local_image  = 'D:\\all\\SIH\\python\\images\\img1.jpg'
 read_response = computervision_client.read_in_stream(open(local_image, 'rb'), language ='en', raw=True)
 read_operation_location = read_response.headers["Operation-Location"]
 operation_id = read_operation_location.split("/")[-1]
