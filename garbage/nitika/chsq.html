@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheque Scanner</title>
+    <link rel="stylesheet" href="chsq.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cheque Scanner</h1>
+        <form id="cheque-form">
+            <input type="file" id="cheque-input" accept="image/*" />
+            <button type="button" id="scan-btn">Scan Cheque</button>
+        </form>
+        <div id="output-container">
+            <h2>Cheque Details</h2>
+            <p><strong>Cheque Number:</strong> <span id="cheque-number">N/A</span></p>
+            <p><strong>Date:</strong> <span id="cheque-date">N/A</span></p>
+            <p><strong>Amount:</strong> <span id="cheque-amount">N/A</span></p>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4.0.0/dist/tesseract.min.js"></script>
+    <script src="chsq.js"></script>
+    
+</body>
+</html>

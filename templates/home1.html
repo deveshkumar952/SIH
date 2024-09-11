@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODE MINDS</title>
+    <link rel="stylesheet" href="../static/css/styles_home.css">
+</head>
+<body>
+    <header>
+        <h1>CODE MINDS</h1>
+    </header>
+    <main>
+        <section class="converter">
+            <h2>Image to Text Converter</h2>
+            <p>
+                Turn picture into text with our free image to text converter. 
+                Simply click the link below to visit our external page and extract text from images with a single click.
+            </p>
+            <div class="external-link">
+                <!-- Updated to use Flask route instead of static HTML file -->
+                <a href="{{ url_for('image_to_text') }}" class="converter-link">Go to Image to Text Converter</a>
+            </div>
+            <p class="privacy-notice">
+                Your privacy is protected! No data is transmitted or stored.
+            </p>
+        </section>
+
+        <section class="tools">
+            <h3>Other Tools</h3>
+            <ul>
+                <li>JPG to PDF</li>
+                <li>PDF to Word</li>
+                <li>Text to Speech</li>
+                <li>Document repair</li>
+                <li>Image Translator</li>
+                <li>Text to Speech</li>
+                <li>Graph conversion</li>
+                <li>Cheque Scan</li>
+                <li>Receipt Scan</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-icons">
+            <span>🐾</span>
+            <span>😸</span>
+            <span>🐾</span>
+        </div>
+    </footer>
+    <section class="project-info">
+        <p>Project by: <strong>God_Aether</strong></p>
+        <p>Contact: <a>Deveshkumar952@gmail.com</a></p>
+    </section>
+    <script src="../static/js/script_home.js"></script>
+</body>
+</html>

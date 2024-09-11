@@ -11,10 +11,41 @@
         <div class="container">
             <div class="selected-images-card">
                 <h2>Your Extracted Text:</h2>
-                <pre>{{ text }}</pre>
+                
+                <!-- Search box for text search -->
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search text..." onkeyup="searchText()">
+                </div>
+
+                <!-- Extracted text section -->
+                <pre id="extractedText">{{ text }}</pre>
+
                 <a href="{{ url_for('home') }}" class="reset pointer">Start Again</a>
             </div>
         </div>
     </section>
+
+    <!-- JavaScript for search functionality -->
+    <script>
+        function searchText() {
+            // Get the search input
+            var input = document.getElementById('searchInput').value.toLowerCase();
+            var extractedText = document.getElementById('extractedText');
+            
+            // Get all the extracted text content
+            var content = extractedText.textContent || extractedText.innerText;
+            
+            // Create a regular expression for the search term (case-insensitive)
+            var regex = new RegExp(input, 'gi');
+            
+            // Replace the text with highlighted search results
+            var newContent = content.replace(regex, function(match) {
+                return '<mark>' + match + '</mark>';
+            });
+            
+            // Update the content of the extracted text section with highlighted search results
+            extractedText.innerHTML = newContent;
+        }
+    </script>
 </body>
 </html>

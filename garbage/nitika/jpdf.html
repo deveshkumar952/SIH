@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JPG
+    PDF </title>
+<style>
+body {
+
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #c92d2d;
+}
+
+.container {
+  background-color: hsl(255, 25%, 97%);
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.upload-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.upload-btn:hover {
+  background-color: #45a049;
+}
+
+.convert-btn {
+  background-color: #008CBA;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.convert-btn:hover {
+  background-color: #007bff;
+}
+
+.download-link {
+  color: #008CBA;
+  text-decoration: none;
+}
+
+.download-link:hover {
+  text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>JPG  <span style='font-size:50px;'>&#8594;</span> PDF </h1>
+  <label for="fileUpload" class="upload-btn">Choose File</label>
+  <input type="file" id="fileUpload" accept=".jpg, .jpeg">
+  <button class="convert-btn" onclick="convert()">Convert to PDF</button>
+  <p>PDF Download Link:</p>
+  <a href="#" class="download-link" id="downloadLink">Download PDF</a>
+</div>
+
+<script>
+function convert() {
+  // Get the file selected by the user.
+  const file = document.getElementById('fileUpload').files[0];
+
+  // Check if a file has been selected.
+  if (!file) {
+    alert('Please select a JPG image to convert.');
+    return;
+  }
+
+  // You'll need to implement the actual conversion logic here, using JavaScript or an API.
+  // This example will simulate the conversion and provide a placeholder download link.
+
+  // Simulate conversion process (replace with your actual logic).
+  const downloadLink = document.getElementById('downloadLink');
+  downloadLink.href = '#'; // Update with actual download link after conversion.
+  downloadLink.text = 'Download PDF'; // Update text to "Download PDF"
+  
+  alert('Conversion complete! You can now download the PDF.');
+}
+</script>
+</body>
+</html>

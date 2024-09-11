@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced OCR</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Advanced OCR</h1>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Upload Document for Advanced OCR</h2>
+            <form action="/advanced_ocr" method="post" enctype="multipart/form-data">
+                <label for="fileUpload" class="upload-btn">Choose File</label>
+                <input type="file" id="fileUpload" name="file" accept=".pdf, .png, .jpg, .jpeg">
+                <button type="submit" class="convert-btn">Extract Text</button>
+            </form>
+            {% if extracted_text %}
+            <section class="text-display">
+                <h2>Extracted Text</h2>
+                <div id="text-area">
+                    <pre>{{ extracted_text }}</pre>
+                </div>
+                <a id="download-link" href="{{ text_url }}" download="extracted_text.txt">
+                    <button type="button">Download Extracted Text</button>
+                </a>
+            </section>
+            {% endif %}
+        </div>
+    </main>
+    <footer>
+        <div class="footer-icons">
+            <span>🐾</span>
+            <span>😸</span>
+            <span>🐾</span>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

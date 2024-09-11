@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF to Word </title>
+    <link rel="stylesheet" href="pdftoword.css">
+</head>
+<body>
+    <header>
+        <h1>PDF <span style='font-size:50px;'>&#8594;</span> Word </h1>
+    </header>
+    <main>
+        <section id="pdf-to-word">
+            <h2>Convert PDF to Word</h2>
+            <form id="pdf-form">
+                <label for="pdf-input">Upload your PDF document:</label>
+                <input type="file" id="pdf-input" accept="application/pdf" required>
+                <button id="convert-button" type="submit">Convert to Word</button>
+            </form>
+            <div id="result-container">
+                <h3>Word Document Download Link:</h3>
+                <p id="result-word"><a href="#" id="download-link" download>Download Word Document</a></p>
+            </div>
+        </section>
+    </main>
+
+    <script src="pdftoword.js"></script>
+</body>
+</html>

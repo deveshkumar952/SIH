@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PDF to Word Converter</title>
+  <style>
+    
+    
+    body {
+        
+        
+        <div>
+         background-image: url("https://appurl.io/wz7vlO-ASS");   
+        font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    .custom-file-upload {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+
+    .custom-file-upload:hover {
+      background-color: #3e8e41; /* Darker Green */
+    }
+
+    button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #3e8e41; /* Darker Green */
+    }
+
+    .download-link {
+      display: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>PDF → Word</h1>
+    <h2>Convert PDF to Word</h2>
+    <p>Upload your PDF document:</p>
+    <label for="file-upload" class="custom-file-upload">Choose File</label>
+    <input type="file" id="file-upload" accept=".pdf">
+    <button onclick="convertPDF()">Convert to Word</button>
+    <a href="#" class="download-link" download="converted.docx">Download Converted File</a>
+  </div>
+
+  <script>
+    function convertPDF() {
+      const fileInput = document.getElementById('file-upload');
+      const file = fileInput.files[0];
+      const downloadLink = document.querySelector('.download-link');
+
+      if (file) {
+        // Replace this with your actual PDF to Word conversion logic
+        // You can use a library like pdf.js or a server-side API
+        // For simplicity, let's just simulate the conversion
+        setTimeout(() => {
+          downloadLink.href = 'https://www.example.com/converted.docx'; // Replace with the actual download link
+          downloadLink.download = 'converted.docx';
+          downloadLink.style.display = 'block';
+        }, 2000); // Simulate a 2-second conversion process
+      } else {
+        alert('Please select a PDF file.');
+      }
+    }
+</div>
+
+  </script>
+</body>
+</html>

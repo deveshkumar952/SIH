@@ -19,8 +19,8 @@
     <header>
         <nav>
             <a href="icon.ico" class="logo-div">
-                <img src="icon.ico" height="100%" width="100%" class="logo" alt="Picture to Text">
-                Picture to Text
+                <img src="../static/icon.ico" height="100%" width="100%" class="logo" alt="Picture to Text">
+                Text Extractor
             </a>
             <input type="checkbox" id="menu-toggle">
             <label for="menu-toggle" class="menu-icon">☰</label>
@@ -55,11 +55,13 @@
                 <div class="inner-tool-card drag-here">
                     <div class="text-center before-input d-flex">
                         <label for="file" class="pointer">
-                            <img src="images/tool-img.svg" alt="tool" width="90" height="85">
+                            <img src="../static/images/tool-img.svg" alt="tool" width="90" height="85">
                         </label>
                         <p class="drag-text">Drag, Upload or Paste images</p>
                         <label class="browse-label" for="file">Browse</label>
                         <small>Files supported: JPG | PNG | JPEG | GIF | JFIF</small>
+                        <!-- Added to display selected file name -->
+                        <div id="file-info"></div>
                     </div>
                 </div>
                 <!-- File input should be visible or accessible via the label -->
@@ -115,6 +117,10 @@
                 </div>
             </div>
         </div>
+    </section>
+    <section class="project-info">
+        <p>Project by: <strong>God_Aether</strong></p>
+        <p>Contact: <a>Deveshkumar952@gmail.com</a></p>
     </section>
 </body>
 </html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JPG to PDF Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>JPG to PDF Converter</h1>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Convert JPG to PDF</h1>
+            <form action="/jpg_to_pdf" method="post" enctype="multipart/form-data">
+                <label for="fileUpload" class="upload-btn">Choose File</label>
+                <input type="file" id="fileUpload" name="file" accept=".jpg, .jpeg">
+                <button type="submit" class="convert-btn">Convert to PDF</button>
+            </form>
+            {% if pdf_url %}
+                <p>PDF Download Link:</p>
+                <a href="{{ pdf_url }}" class="download-link" download>Download PDF</a>
+            {% endif %}
+        </div>
+    </main>
+    <footer>
+        <div class="footer-icons">
+            <span>🐾</span>
+            <span>😸</span>
+            <span>🐾</span>
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

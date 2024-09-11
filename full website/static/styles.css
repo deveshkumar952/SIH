@@ -1,0 +1,129 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ec940f;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 2rem;
+}
+
+/* Upload Section */
+.upload-area {
+    margin-top: 1rem;
+}
+
+.upload-box {
+    border: 2px dashed #ec940f;
+    padding: 1rem;
+    text-align: center;
+}
+
+button {
+    background-color: #ec940f;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d88200;
+}
+
+/* Text Display Section */
+.text-display {
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px solid #ec940f;
+    border-radius: 8px;
+    background-color: #f1f1f1;
+    text-align: left; /* Text alignment is left as-is */
+}
+
+.text-display h2 {
+    margin-top: 0;
+}
+
+#text-area {
+    white-space: pre-wrap; /* Preserve white spaces and line breaks */
+    padding: 1rem;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* Centering Download Button */
+#download-link {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+/* Tools Section */
+.tools {
+    background-color: #ffffff;
+    padding: 2rem;
+    border: 1px solid #ec940f;
+    border-radius: 8px;
+    margin-top: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.tools h3 {
+    margin-top: 0;
+    color: #ec940f;
+    font-size: 1.5rem; /* Slightly larger font size */
+}
+
+.tools ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tools ul li {
+    margin: 0.75rem 0;
+    padding: 0.5rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ececec;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.tools ul li:hover {
+    background-color: #ec940f;
+    color: #fff;
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.tools ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Footer */
+footer {
+    background-color: #f1f1f1;
+    padding: 1rem;
+    text-align: center;
+}
+
+.footer-icons {
+    font-size: 1.5rem;
+}

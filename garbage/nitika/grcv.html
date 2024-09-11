@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Converter</title>
+    <link rel="stylesheet" href="grcv.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Graph Converter</h1>
+        <form id="data-form">
+            <textarea id="data-input" placeholder="Enter data in the format: x1,y1;x2,y2;..." rows="4"></textarea>
+            <button type="button" id="generate-btn">Generate Graph</button>
+        </form>
+        <canvas id="graphCanvas"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="grcv.js"></script>
+</body>
+</html>

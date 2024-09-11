@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF to Word Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>PDF to Word Converter</h1>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Convert PDF to Word</h1>
+            <form action="/pdf_to_word" method="post" enctype="multipart/form-data">
+                <label for="fileUpload" class="upload-btn">Choose File</label>
+                <input type="file" id="fileUpload" name="file" accept=".pdf">
+                <button type="submit" class="convert-btn">Convert to Word</button>
+            </form>
+            {% if word_url %}
+            <p>Conversion successful! <a href="{{ word_url }}" download>Download Word Document</a></p>
+            {% endif %}
+        </div>
+    </main>
+    <footer>
+        <div class="footer-icons">
+            <span>🐾</span>
+            <span>😸</span>
+            <span>🐾</span>
+        </div>
+    </footer>
+</body>
+</html>

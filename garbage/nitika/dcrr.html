@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Repair Tool</title>
+    <link rel="stylesheet" href="dcrr.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Document Repair Tool</h1>
+        <form id="repair-form">
+            <input type="file" id="file-input" accept=".txt,.docx" />
+            <button type="button" id="repair-btn">Repair Document</button>
+        </form>
+        <div id="output-container">
+            <h2>Repaired Document</h2>
+            <textarea id="output-text" readonly></textarea>
+        </div>
+    </div>
+    <script src="dcrr.js"></script>
+</body>
+</html>

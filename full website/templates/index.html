@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEXT.CON</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>TRANSFORMO DOCS</h1>
+    </header>
+    <main>
+        <section class="converter">
+            <h2>Image to Text Converter</h2>
+            <p>
+                Turn picture into text with our free image to text converter. 
+                Simply upload your photos in our online OCR and extract text from image with a single click.
+            </p>
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <div class="upload-area">
+                    <div class="upload-box">
+                        <input type="file" name="file" accept="image/*" />
+                        <button type="submit">Upload</button>
+                    </div>
+                </div>
+            </form>
+            <p class="privacy-notice">
+                Your privacy is protected! No data is transmitted or stored.
+            </p>
+        </section>
+
+        <!-- Section for displaying text and download button -->
+        {% if text %}
+        <section class="text-display">
+            <h2>Extracted Text</h2>
+            <div id="text-area">
+                {{ text|safe }}
+            </div>
+            <a id="download-link" href="{{ url_for('download_file', filename='output_text.txt') }}" download="output_text.txt">
+                <button type="button">Download Text</button>
+            </a>
+        </section>
+        {% endif %}
+
+        <!-- Centering Other Tools Section -->
+        <section class="tools">
+            <h3>Other Tools</h3>
+            <ul>
+                <li><a href="{{ url_for('jpg_to_pdf_page') }}">JPG to PDF</a></li>
+                <li><a href="{{ url_for('pdf_to_word_page') }}">PDF to Word</a></li>
+                <li><a href="{{ url_for('advanced_ocr_page') }}">Advanced OCR</a></li>
+                <li>Document repair</li>
+                <li>Image Translator</li>
+                <li>Text to Speech</li>
+                <li>Graph conversion</li>
+                <li>Cheque Scan</li>
+                <li>Receipt Scan</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-icons">
+            <span>🐾</span>
+            <span>😸</span>
+            <span>🐾</span>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

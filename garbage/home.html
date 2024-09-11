@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Image to Text Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style-0d4ea682.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo-div">
+                <img src="icon.ico" height="100%" width="100%" class="logo" alt="Logo">
+                Welcome Page
+            </a>
+            <ul class="menu">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('image_to_text') }}">Image to Text Converter</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="text-center">
+                <h1>Welcome to the Image to Text Converter</h1>
+                <p>Convert your images into editable text with our powerful tool.</p>
+                <a href="{{ url_for('image_to_text') }}" class="button">Go to Converter</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
